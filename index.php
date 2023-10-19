@@ -17,6 +17,18 @@ organizzando il layout dividendo la struttura ed i contenuti in file e parziali 
 include __DIR__ . '/models/movie.php';
 include __DIR__ . '/models/db.php';
 
+/* 
+define('PHP-OOP-1', __DIR__);
+define('DS', DIRECTORY_SEPARATOR);
+require_once 'PHP-OOP-1' . DS . 'models' . DS . 'movie.php';
+
+require_once 'PHP-OOP-1' . DS . 'models' . DS . 'db.php';
+*/
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>
