@@ -1,6 +1,6 @@
 <?php
 
-class Movie
+class Movies
 {
     public $title;
     public $description;
@@ -21,3 +21,5 @@ class Movie
         var_dump($this->year);
     }
 }
+
+include __DIR__ . '/db.php';
