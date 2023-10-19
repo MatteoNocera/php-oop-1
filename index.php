@@ -15,6 +15,7 @@ organizzando il layout dividendo la struttura ed i contenuti in file e parziali 
 
 
 include __DIR__ . '/models/movie.php';
+include __DIR__ . '/models/db.php';
 
 ?>
 
@@ -25,13 +26,32 @@ include __DIR__ . '/models/movie.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OOP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
 </head>
 
 <body>
-    <h1>Film</h1>
-    <ul>
-        <li>{{}}</li>
-    </ul>
+    <div class="container">
+
+        <h1>Film</h1>
+
+        <div class="row row-cols-1 row-cols-md-3 m-auto justify-content-center">
+            <?php foreach ($movies as $film) : ?>
+                <div class="col">
+
+
+                    <div class="card">
+                        <h2><?= $film->title ?></h2>
+                        <h5>Year: <?= $film->year ?></h5>
+                        <p><?= $film->regia ?></p>
+                        <p><small><?= $film->duration ?></small></p>
+                    </div>
+
+
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,9 +1,8 @@
 <?php
 
-class Movies
+class Movie
 {
     public $title;
-    public $description;
     public $year;
     public $duration;
     public $regia;
@@ -12,14 +11,17 @@ class Movies
     public function __construct($title, $regia, $duration)
     {
         $this->title = $title;
-        $this->year = $regia;
+        $this->regia = $regia;
         $this->duration = $duration;
     }
 
-    public function getYear()
+    public function setYear($year)
     {
-        var_dump($this->year);
+        $this->year = $year;
+    }
+
+    public function getRegia()
+    {
+        return $this->regia;
     }
 }
-
-include __DIR__ . '/db.php';
