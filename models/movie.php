@@ -1,5 +1,5 @@
 <?php
-
+# creo una classe movie con attributi e funzioni al suo interno
 class Movie
 {
     public $title;
