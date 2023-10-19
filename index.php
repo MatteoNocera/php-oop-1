@@ -36,6 +36,7 @@ include __DIR__ . '/models/db.php';
         <h1 class="mb-5 fw-bold text-white">Film</h1>
 
         <div class="row row-cols-1 row-cols-md-3 m-auto justify-content-center">
+            <!-- inserisco un ciclo -->
             <?php foreach ($movies as $film) : ?>
                 <div class="col g-5">
 
