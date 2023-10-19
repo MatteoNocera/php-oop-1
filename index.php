@@ -12,18 +12,20 @@ creando un file dedicato ai dati (tipo le array di oggetti) che potremmo chiamar
 mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare Models/
 organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati. */
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+/* include __DIR__ . '/models/movie.php';
+include __DIR__ . '/models/db.php'; */
 
 
-include __DIR__ . '/models/movie.php';
-include __DIR__ . '/models/db.php';
-
-/* 
-define('PHP-OOP-1', __DIR__);
+define('ROOT', __DIR__);
 define('DS', DIRECTORY_SEPARATOR);
-require_once 'PHP-OOP-1' . DS . 'models' . DS . 'movie.php';
 
-require_once 'PHP-OOP-1' . DS . 'models' . DS . 'db.php';
-*/
+require_once ROOT . DS . 'models' . DS . 'movie.php';
+
+require_once ROOT . DS . 'models' . DS . 'db.php';
+
 
 
 
