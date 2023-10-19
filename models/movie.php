@@ -20,8 +20,8 @@ class Movie
         $this->year = $year;
     }
 
-    public function getRegia()
+    public function setPath($path)
     {
-        return $this->regia;
+        $this->poster_path = $path;
     }
 }

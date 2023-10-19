@@ -30,21 +30,27 @@ include __DIR__ . '/models/db.php';
 </head>
 </head>
 
-<body>
-    <div class="container">
+<body class="bg-secondary ">
+    <div class="container p-5">
 
-        <h1>Film</h1>
+        <h1 class="mb-5 fw-bold text-white">Film</h1>
 
         <div class="row row-cols-1 row-cols-md-3 m-auto justify-content-center">
             <?php foreach ($movies as $film) : ?>
-                <div class="col">
+                <div class="col g-5">
 
 
-                    <div class="card">
-                        <h2><?= $film->title ?></h2>
-                        <h5>Year: <?= $film->year ?></h5>
-                        <p><?= $film->regia ?></p>
-                        <p><small><?= $film->duration ?></small></p>
+                    <div class="card h-100 bg-dark bg-gradient text-white">
+
+                        <img class="card-img-top p-2" src='<?= $film->poster_path ?>' alt="">
+
+                        <div class="card-body">
+                            <h2><?= $film->title ?></h2>
+                            <h5>Anno: <?= $film->year ?></h5>
+                            <p>Regia: <?= $film->regia ?></p>
+                            <p>Durata: <small><?= $film->duration ?></small></p>
+                        </div>
+
                     </div>
 
 
